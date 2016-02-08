@@ -9,7 +9,7 @@ clean-build:
 	@rm -rf ./build/*
 
 build: clean-build
-	@./node_modules/.bin/webpack
+	@NODE_ENV=prod ./node_modules/.bin/webpack -p --progress
 
 run-dev: clean-build
-	@./node_modules/.bin/webpack-dev-server --hot --inline --port=8080
+	@NODE_ENV=dev ./node_modules/.bin/webpack-dev-server --hot --inline --port=8080
