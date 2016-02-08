@@ -26,12 +26,6 @@ test-functional: clean-build
 	@node_modules/.bin/nightwatch
 	@node_modules/.bin/pm2 stop rtc-static-server
 
-test-functional-snapci: clean-build
-	@make build
-	@node_modules/.bin/pm2 start rtc_functional_tests.json
-	@node_modules/.bin/nightwatch -c ./nightwatch-snapci.json
-	@node_modules/.bin/pm2 stop rtc-static-server
-
 deploy: build
 	@ echo '* Deploy web app on S3 *'
 	aws s3 --profile=caen --region=eu-west-1 sync ./build/ s3://road-to-caen.alexisjanvier.net/ --delete
