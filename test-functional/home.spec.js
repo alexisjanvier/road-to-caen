@@ -1,7 +1,5 @@
-const config = require('config')
-
 module.exports = {
-    'Display Home': function(client) {
+    'Display Home': function (client) {
         client
             .url('http://localhost:8088')
             .pause(1000);
