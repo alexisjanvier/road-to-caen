@@ -1,0 +1,34 @@
+{
+  "name": "road-to-caen",
+  "version": "0.1.0",
+  "description": "An application to help newcomers to find the right place in Caen",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexisjanvier/road-to-caen.git"
+  },
+  "keywords": [
+    "es6",
+    "serverless",
+    "caen"
+  ],
+  "author": "alexisjanvier <contact@alexisjanvier.net>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/alexisjanvier/road-to-caen/issues"
+  },
+  "homepage": "https://github.com/alexisjanvier/road-to-caen#readme",
+  "devDependencies": {
+    "babel-cli": "~6.5.1",
+    "babel-core": "~6.5.1",
+    "babel-preset-es2015-node5": "~1.1.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015-node5"
+    ]
+  }
+}
