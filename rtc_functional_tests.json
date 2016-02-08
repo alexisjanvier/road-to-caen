@@ -1,0 +1,8 @@
+{
+  "apps" : [{
+    "name"       : "rtc-static-server",
+    "script"     : "NODE_ENV=test node_modules/.bin/http-server",
+    "args"       : ["./build", "-p 8088", "--silent"],
+    "instances"  : 1
+  }]
+}

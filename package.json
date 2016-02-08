@@ -33,7 +33,9 @@
     "html-webpack-plugin": "~2.8.1",
     "http-server": "~0.8.5",
     "mocha": "~2.4.5",
+    "nightwatch": "~0.8.16",
     "pm2": "~1.0.0",
+    "selenium-standalone": "~4.9.0",
     "style-loader": "~0.13.0",
     "webpack": "~1.12.13",
     "webpack-dev-server": "~1.14.1"

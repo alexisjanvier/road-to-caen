@@ -3,6 +3,8 @@ build
 config/dev.js
 config/prod.js
 config/test.js
+test-functional/reports
+test-functional/screen-caps
 
 # Logs
 logs
