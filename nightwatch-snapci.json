@@ -1,0 +1,35 @@
+{
+    "src_folders": ["./test-functional/"],
+    "output_folder": "./test-functional/reports",
+    "custom_commands_path": "",
+    "custom_assertions_path": "",
+    "globals_path": "",
+
+    "selenium": {
+        "start_process": false
+    },
+
+    "test_settings": {
+        "default": {
+            "launch_url": "http://localhost:8088",
+            "selenium_port": 4444,
+            "selenium_host": "localhost",
+            "silent": true,
+            "firefox_profile" : false,
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true
+            },
+            "screenshots": {
+                "enabled": true,
+                "path": "./test-functional/screen-caps"
+            },
+            "desiredCapabilities": {
+              "browserName": "firefox",
+              "javascriptEnabled": true,
+              "acceptSslCerts": true
+            }
+        }
+    }
+}

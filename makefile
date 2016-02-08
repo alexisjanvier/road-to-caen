@@ -23,7 +23,13 @@ test-unit:
 test-functional: clean-build
 	@make build
 	@node_modules/.bin/pm2 start rtc_functional_tests.json
-	@NODE_ENV=test node_modules/.bin/nightwatch
+	@node_modules/.bin/nightwatch
+	@node_modules/.bin/pm2 stop rtc-static-server
+
+test-functional-snapci: clean-build
+	@make build
+	@node_modules/.bin/pm2 start rtc_functional_tests.json
+	@node_modules/.bin/nightwatch -c ./nightwatch-snapci.json
 	@node_modules/.bin/pm2 stop rtc-static-server
 
 deploy: build
