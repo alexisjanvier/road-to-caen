@@ -16,11 +16,6 @@
             "selenium_host": "localhost",
             "silent": true,
             "firefox_profile" : false,
-            "desiredCapabilities": {
-                "browserName": "chrome",
-                "javascriptEnabled": true,
-                "acceptSslCerts": true
-            },
             "screenshots": {
                 "enabled": true,
                 "path": "./test-functional/screen-caps"
