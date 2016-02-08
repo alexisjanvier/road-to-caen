@@ -5,7 +5,6 @@ default: run-dev
 install:
 	@npm install
 	@node_modules/.bin/selenium-standalone install --version=2.48.2
-	@make test
 
 clean-build:
 	@rm -rf ./build/*
@@ -24,5 +23,9 @@ test-unit:
 test-functional: clean-build
 	@make build
 	@node_modules/.bin/pm2 start rtc_functional_tests.json
-	@NODE_ENV=test node_modules/.bin/nightwatch -e firefox,chrome
+	@NODE_ENV=test node_modules/.bin/nightwatch
 	@node_modules/.bin/pm2 stop rtc-static-server
+
+deploy: build
+	@ echo '* Deploy web app on S3 *'
+	aws s3 --profile=caen --region=eu-west-1 sync ./build/ s3://road-to-caen.alexisjanvier.net/ --delete
